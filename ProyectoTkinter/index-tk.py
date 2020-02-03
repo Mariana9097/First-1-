@@ -56,6 +56,7 @@ class Paciente:
 
      def listar_pacientes(self):
          records= self.tree.get_children()
+         #Importante: se limpia la lista
          for element in records:
              self.tree.delete(element)
          query='SELECT *FROM Paciente ORDER BY Nombre DESC'
